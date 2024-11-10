@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './components/Home'
+import Services from './components/Services'
+import About from './components/About'
+import PatientReview from './components/PatientReview'
+import ContactPage from './components/ContactPage'
+import DoctorDetails from './components/DoctorDetails'
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import AppointmentPopup from './components/AppointmentPopup'
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        
+      <Navbar/>
+      
+      <section id="home">
+      <Home/>
+      </section>
+
+      <AppointmentPopup/>
+
+      <section id="services">
+      <Services/>
+      </section>
+
+      <section id="about">
+      <About/>
+      </section>
+
+      <section id="docter">
+      <DoctorDetails/>
+      </section>
+
+      <PatientReview/>
+
+      <section id="contact">
+      <ContactPage/>
+      </section>
+      
+      <Footer/> 
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
